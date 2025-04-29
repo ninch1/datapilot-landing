@@ -10,3 +10,21 @@
     --color-grey: #9CA3AF;
     --color-button-blue: #1869F8;
 }
+
+.btn-shadow {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes wiggle-cloud {
+    0%, 100% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+  
+  .wiggle-cloud {
+    animation: wiggle-cloud 12s ease-in-out infinite;
+  }
+  
