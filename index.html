@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
 <body class="bg-whitebg font-poppins w-full overflow-x-hidden">
-  <!-- header/navbar -->
-  <header class="flex items-center justify-between px-4 pt-4 xl:px-10">
+
+  <!-- navbar -->
+  <nav  class="flex items-center justify-between px-4 py-4 xl:px-10">
     <div class="text-pink text-xl md:text-4xl font-semibold cursor-pointer">
       DataPilot
     </div>
@@ -20,11 +21,38 @@
       <button class="bg-blue-400 hover:bg-blue-600 md:text-2xl lg:text-xl text-white text-sm font-semibold py-1.5 md:py-3 px-4 md:px-6 rounded-full btn-shadow transition cursor-pointer">
         Get Started
       </button>
-      <div class="lg:hidden text-3xl md:text-5xl text-dark cursor-pointer">
+      <div id="hamburger" class="lg:hidden text-3xl md:text-5xl text-dark cursor-pointer">
         &#9776; <!-- unicode for menu icon -->
       </div>
     </div>
-  </header>
+  </nav>
+  <nav  id="main-nav" class="flex items-center justify-between px-4 py-4 xl:px-10 transition-all duration-300 ease-in-out">
+    <div class="text-pink text-xl md:text-4xl font-semibold cursor-pointer">
+      DataPilot
+    </div>
+    <div class="flex items-center gap-3 lg:gap-7 xl:gap-9 2xl:gap-12">
+      <nav class="hidden lg:block text-dark text-xl cursor-pointer">Features</nav>
+      <nav class="hidden lg:block text-dark text-xl cursor-pointer">Pricing</nav>
+      <nav class="hidden lg:block text-dark text-xl cursor-pointer">Contacts</nav>
+      <div class="hidden lg:block w-px h-10 bg-dark opacity-50"></div>
+      <button class="bg-blue-400 hover:bg-blue-600 md:text-2xl lg:text-xl text-white text-sm font-semibold py-1.5 md:py-3 px-4 md:px-6 rounded-full btn-shadow transition cursor-pointer">
+        Get Started
+      </button>
+      <div id="hamburger1" class="lg:hidden text-3xl md:text-5xl text-dark cursor-pointer">
+        &#9776; <!-- unicode for menu icon -->
+      </div>
+    </div>
+  </nav>
+  <div id="navbar-placeholder" class="h-0"></div>
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="lg:hidden fixed top-20 left-0 w-full bg-whitebg shadow-md z-40 flex flex-col items-center gap-4 py-6 text-dark text-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
+    <a href="#features" class="cursor-pointer">Features</a>
+    <a href="#pricing" class="cursor-pointer">Pricing</a>
+    <a href="#contacts" class="cursor-pointer">Contacts</a>
+    <button class="bg-blue-400 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full transition">Get Started</button>
+  </div>
+  
+
   <img src="./src/IMG_8054.png" alt="Clouds"
      class="absolute lg:hidden top-0 right-0 scale-200 md:scale-150 translate-x-[50%] md:translate-x-[30%] translate-y-[-35%] md:translate-y-[-45%] -z-10 pointer-events-none wiggle-cloud" />
   <!-- hero section -->
@@ -213,5 +241,7 @@
     </div>
     <p>© 2025 <span class="text-pink">DataPilot</span>, Inc. All rights reserved.</p>
   </footer> 
+
+  <script src="./js/sticky-navbar.js"></script>
 </body>
 </html>
